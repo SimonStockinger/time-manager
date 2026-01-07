@@ -13,8 +13,7 @@ def run(force=False, plan_date=None):
     slots = []
 
     for time in SLOTS:
-        print(f"{time}:")
-        topic = input("Topic: ").strip()
+        topic = input(f"{time}: ").strip()
         if not topic:
             continue
 
