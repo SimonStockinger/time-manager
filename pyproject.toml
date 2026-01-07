@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmngr"
+version = "0.1.5"
+description = "Minimal CLI time manager"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Simon Stockinger" }
+]
+
+[project.scripts]
+tmngr = "tmngr.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
