@@ -27,4 +27,3 @@ def run(args):
         for t in s.todos:
             mark = "[x]" if t.done else "[ ]"
             print(f"{mark} {t.text}")
-        print()
