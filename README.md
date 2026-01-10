@@ -54,13 +54,11 @@ tmngr init
 
 Follow the interactive prompts:
 ```
-07-08:
-Topic: Overview
+07-08: Overview
 Todo: Review plan
 Todo: Make tea
 Todo: 
-08-09:
-Topic: Operating Systems
+08-09: Operating Systems
 Todo: Solve past exam 20/22
 Todo:
 ```
