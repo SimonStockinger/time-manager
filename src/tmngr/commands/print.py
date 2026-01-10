@@ -1,9 +1,8 @@
-from datetime import date
-from datetime import datetime
+import datetime
 from tmngr.storage import load_plan
 
 def run(args):
-    plan_date = getattr(args, "date", None) or date.today().isoformat()
+    plan_date = getattr(args, "date", None) or datetime.date.today().isoformat()
     plan = load_plan(plan_date)
 
     if getattr(args, "json", False):
@@ -23,7 +22,7 @@ def run(args):
         }, indent=2, ensure_ascii=False))
         return
 
-    print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     print("-------------------")
     for s in plan.slots:
         print(f"{s.time}: {s.topic}")
