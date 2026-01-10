@@ -22,8 +22,8 @@ def run(args):
         }, indent=2, ensure_ascii=False))
         return
 
-    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-    print("-------------------")
+    print(datetime.datetime.now().strftime('%d.%m.%Y | %H:%M'))
+    print("------------------")
     for s in plan.slots:
         print(f"{s.time}: {s.topic}")
         for t in s.todos:
