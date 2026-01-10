@@ -1,4 +1,5 @@
 from datetime import date
+from datetime import datetime
 from tmngr.storage import load_plan
 
 def run(args):
@@ -22,6 +23,8 @@ def run(args):
         }, indent=2, ensure_ascii=False))
         return
 
+    print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    print("-------------------")
     for s in plan.slots:
         print(f"{s.time}: {s.topic}")
         for t in s.todos:
