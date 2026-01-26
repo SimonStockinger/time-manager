@@ -18,11 +18,11 @@ def load_todos():
         return []
     with open(TODO_FILE, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    return [Todo(t["text"], t.get("done", False)) for t in raw]
+    return [Todo(t["text"]) for t in raw]
 
 def save_todos(todos):
     ensure_data_dir()
-    data = [{"text": t.text, "done": t.done} for t in todos]
+    data = [{"text": t.text} for t in todos]
     with open(TODO_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
@@ -49,7 +49,7 @@ def print_todo(todos):
     print("Generelle Todo-Liste:")
     print("-------------------")
     for i, t in enumerate(todos, 1):
-        print(f"{i}) {mark} {t.text}")
+        print(f"{i}) {t.text}")
 
 
 def remove_todo(todos):
@@ -59,7 +59,7 @@ def remove_todo(todos):
 
     print("Welche Todos entfernen?")
     for i, t in enumerate(todos, 1):
-        print(f"{i}) {mark} {t.text}")
+        print(f"{i}) {t.text}") 
 
     sel = input("Nummer zum Löschen (Enter zum Abbrechen): ").strip()
     if not sel.isdigit():
