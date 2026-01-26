@@ -20,7 +20,8 @@ Currently written in Python, designed for Linux (especially Arch Linux), and eas
   - `tmngr init` – create or update today's plan  
   - `tmngr print` – display your plan  
   - `tmngr now` – show the current slot  
-  - `tmngr done` – mark/unmark todos as done  
+  - `tmngr done` – mark/unmark todos as done
+  - `tmgr todo` - manages a global todo list
 - Optional JSON output for automation or scripting
 
 Running `tmngr` without arguments calls `init` if run for the first time of the day. Else `print` is executed.
@@ -87,10 +88,25 @@ Sample output:
 ```bash
 tmngr now
 ```
-
 Displays the current time slot and its tasks with status.
 
 ### Mark/unmark tasks as done
+
+### General ToDos
+Adding ToDos
+```bash
+tmngr todo Task A
+```
+
+Printing ToDos
+```bash
+tmngr todo
+```
+
+Removing global ToDos
+```bash
+tmngr todo done
+```
 
 ## Data storage
 
